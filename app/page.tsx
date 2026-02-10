@@ -1,17 +1,15 @@
 export default function HomePage() {
   return (
     <main className="page">
-      {/* HERO */}
-      <section className="hero">
-        <h1 className="hero-title">SelfForge</h1>
-        <p className="hero-subtitle">
+      <section className="intro">
+        <h1>SelfForge</h1>
+        <p className="tagline">
           We build focused software products that replace complexity with clarity.
         </p>
       </section>
 
-      {/* PRODUCTS */}
       <section className="products">
-        <div className="product-card">
+        <div className="product">
           <h2>AutoForge</h2>
           <p>
             Intelligent automotive software that turns vehicle data, diagnostics,
@@ -19,7 +17,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="product-card">
+        <div className="product">
           <h2>DevBuddy</h2>
           <p>
             A developer-focused AI assistant designed to reason, build,
@@ -27,18 +25,17 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="product-card muted">
+        <div className="product muted">
           <h2>?????</h2>
           <p>
-            A logistics and fleet platform currently in development.
-            Purpose-built for the real-world trucking industry.
+            A logistics and fleet platform currently in development, purpose-built
+            for the real-world trucking industry.
           </p>
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="footer">
-        <p>© {new Date().getFullYear()} SelfForge LLC</p>
+        © {new Date().getFullYear()} SelfForge LLC
       </footer>
     </main>
   );
