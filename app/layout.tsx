@@ -14,8 +14,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="sf-background" />
-        {children}
+        <div className="sf-root">
+          <div className="sf-background" />
+          {children}
+        </div>
       </body>
     </html>
   );
