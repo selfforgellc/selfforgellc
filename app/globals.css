@@ -1,7 +1,3 @@
-html {
-  background: red !important;
-}
-
 /* RESET */
 * {
   box-sizing: border-box;
@@ -9,64 +5,45 @@ html {
   padding: 0;
 }
 
-/* SELF FORGE COLORS — FROM OLD SITE */
-:root {
-  --sf-red: #e50914;
-  --sf-dark: #0b0b0b;
-}
-
 /* BASE */
 html,
 body {
   height: 100%;
-  width: 100%;
-  color: white;
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  background-color: #0b0b0b;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   overflow-x: hidden;
 }
 
-/* IMPORTANT: BODY BACKGROUND LAYER */
-body {
-  position: relative;
-  background: radial-gradient(
-    circle at 50% 20%,
-    var(--sf-dark) 0%,
-    #000 80%
-  );
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* EDGE DARKENING MASK — THIS IS WHAT YOU WERE MISSING */
-body::after {
-  content: "";
+/* RED ENERGY BACKGROUND LAYER (OLD SITE FEEL) */
+.sf-background {
   position: fixed;
   inset: 0;
-  pointer-events: none;
-  background: radial-gradient(
-    circle at center,
-    transparent 60%,
-    #000 100%
-  );
   z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      700px 450px at 50% 28%,
+      rgba(229, 9, 20, 0.45),
+      rgba(229, 9, 20, 0.18) 45%,
+      rgba(0, 0, 0, 0) 72%
+    ),
+    radial-gradient(
+      1200px 900px at 50% 30%,
+      rgba(229, 9, 20, 0.18),
+      rgba(0, 0, 0, 0) 70%
+    );
 }
 
-/* FORCE ALL LAYOUT CONTAINERS TO BE TRANSPARENT */
-main,
-section,
-div {
-  background-color: transparent !important;
-}
-
-/* PAGE WRAPPER */
+/* PAGE */
 .page {
   min-height: 100vh;
   max-width: 1000px;
   margin: 0 auto;
   padding: 80px 24px 60px;
+  position: relative;
 }
 
 /* INTRO */
@@ -90,7 +67,7 @@ div {
 
 .product {
   padding: 22px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .product:first-child {
@@ -111,16 +88,6 @@ div {
 
 .product.muted {
   opacity: 0.6;
-}
-
-/* SUBTLE SELF FORGE RED ACCENT */
-.product h2::after {
-  content: "";
-  display: block;
-  width: 28px;
-  height: 2px;
-  background-color: var(--sf-red);
-  margin-top: 6px;
 }
 
 /* FOOTER */
